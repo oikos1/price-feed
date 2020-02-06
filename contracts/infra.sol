@@ -1,7 +1,3 @@
-/// tub.sol -- simplified CDP engine (baby brother of `vat')
-
-// Copyright (C) 2017  Nikolai Mushegian <nikolai@dapphub.com>
-
 
 pragma solidity ^0.4.18;
 

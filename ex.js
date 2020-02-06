@@ -13,28 +13,28 @@ const web3 = require('web3');
 
 const HttpProvider = TronWeb.providers.HttpProvider;
 // Full node http endpoint
-const fullNode = new HttpProvider("http://192.168.0.102:9090");
+const fullNode = new HttpProvider("http://192.168.0.108:9090");
 // Solidity node http endpoint
-const solidityNode = new HttpProvider("http://192.168.0.102:9090");
+const solidityNode = new HttpProvider("http://192.168.0.108:9090");
 // Contract events http endpoint
-const eventServer = "http://192.168.0.102:9090";
+const eventServer = "http://192.168.0.108:9090";
 
 // update with your private key here
-const privateKey = '31ca7245cd48254df2d08eb9ac28cb0e941e5f9145586193655b17f51a9d6f26';
-const _address = 'TEsk263pdTwFgXEC2oqCuVoxwTgGVhqrDJ'
+const privateKey = '3f2cdb5f5d5c8618b1aeb6b32ca4f32c9254c01150161962898eab4c089bc554';
+const _address = 'TJzcZvmyrztfHhvCD8s6zi2AVYoscgWqtJ';
 
 const tronWeb = new TronWeb(fullNode, solidityNode, eventServer, privateKey);
 
-const pricefeed_Address = 'TWnchaKo5LzZyn5GdyjaUp45UnwNzQuQDk';
-const pricefeed2_Address = 'TURuge3Rp7q1c7hdwixKZ1YK2UFMzagYzQ';
+const pricefeed_Address = 'TKf633vvXqa7P9m1izvW4WSzbi2JGP4Ajk';
+const pricefeed2_Address = 'TTfJDzieN5nBLSSLQHPPWETeckt2PykJDe';
 
-const medianizer_Address = 'TSQQS98i7MUoNsVcMCx2uDDMUeC2PTpNrs'; 
-const medianizer2_Address = 'TK6hdLFASTxZzP5Urg5a48PEPiwpDvP934'; 
-const perFeed_Address = 'TAxQvGo8Czb23yvM3ky193uFoCNDrN3Af9';
+const medianizer_Address = 'TUxPnshiKm79wn2dTAiYpSUgo3svg7DPNV'; 
+const medianizer2_Address = 'TNEQziwuYv8Pa868zypUML5aYoh8pdq4k4'; 
 
-const SAI_GEM_Address = 'TCw74sCgyP3zC1VcYcUH6dpRNCWkePGJRV';
-const SKR_Address = 'TQEYTvA5kma2P9ShAixyNfB1GApvWzoNbe';
+const perFeed_Address = 'TK9wXnD9x1xnzUsM5FQY5iXhhPrXQMCE9N';
 
+const SAI_GEM_Address = 'TUXJrBzi9vSVhUFSbBro1kUMbPh1KQuEmj';
+const SKR_Address = 'TXCui2SDrwANpVGUCpVUjW3EZL8uh5KQAQ';
 
 const deployContract = async (name, ...args) => {
     const Contract = loadArtifact(name);
@@ -158,7 +158,7 @@ const run = async () => {
             console.log(err)
     });
  
-
+*/
     /*pricefeed.read().call({
             shouldPollResponse: true,
             callValue: 0, 
@@ -187,8 +187,8 @@ const run = async () => {
             console.log(err)
     });
 */
-/*
 
+/*
     medianizer.set(pricefeed.address).send({
             shouldPollResponse: true,
             callValue: 0, 
@@ -216,11 +216,9 @@ const run = async () => {
         }).catch(function (err) {
             console.log(err)
     });    
-
-
 */
 
-     pricefeed.post( web3.utils.toWei("0.0132555"), "1591994899", medianizer.address ).send({
+     /*pricefeed.post( web3.utils.toWei("0.0103999"), "1591994899", medianizer.address ).send({
             shouldPollResponse: true,
             callValue: 0, 
             from : _address
@@ -246,7 +244,7 @@ const run = async () => {
 
         }).catch(function (err) {
             console.log(err)
-    });
+    });*/
 
 
     Pricefeed.LogPeek().watch((err, {result}) => {
